@@ -1,0 +1,165 @@
+:root {
+  --main-font: 'Luxurious Roman', cursive;
+  --title-font: 'Mochiy Pop P One', sans-serif;
+  --primary-color: #275c91;
+  --secondary-color: rgb(165, 165, 165);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  list-style: none;
+}
+body {
+  height: 100vh;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 255, 0.473),
+    rgb(78, 218, 206) 50%
+  );
+}
+main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#menu__list {
+  display: flex;
+  justify-content: flex-end;
+  margin-inline-end: 1rem;
+  margin-block-start: 1rem;
+}
+.main__title {
+  font-size: 2rem;
+  text-align: center;
+  font-family: var(--title-font);
+  color: var(--primary-color);
+}
+.menu__list--item {
+  margin-inline-start: 1rem;
+  font-family: var(--title-font);
+  font-size: 1.2rem;
+  color: aliceblue;
+  transition: all 0.3s ease;
+}
+.menu__list--item:hover {
+  color: hsl(204, 83%, 32%);
+  transform: scale(1.1);
+}
+.main__container {
+  /* border: 1px solid red; */
+  /* width: 50%; */
+  margin: 1rem;
+  padding: 1rem;
+  min-height: fit-content;
+  height: 20rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(148, 146, 146);
+}
+.input__box--container {
+  /* width: 30%; */
+  background-color: var(--primary-color);
+  display: flex;
+  transition: all 0.2s ease;
+}
+.input__box:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+.input__box--container:focus-within {
+  box-shadow: -5px 3px 16px -5px #000000;
+}
+.pixel {
+  display: inline;
+  text-align: center;
+  color: white;
+  font-weight: 500;
+  font-size: 2rem;
+  padding-inline: 0.5rem;
+}
+.input__box {
+  width: 90%;
+  height: 3rem;
+  border: none;
+  display: inline;
+  font-size: 1.5rem;
+  text-align: center;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+.input__btn {
+  /* height: 2rem; */
+  min-height: fit-content;
+  font-size: 1.6rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem;
+  color: white;
+  background-color: var(--primary-color);
+  transition: all 0.5s ease;
+}
+.input__btn:hover {
+  color: var(--primary-color);
+  background-color: white;
+}
+.result {
+  font-family: var(--main-font);
+  font-size: 2rem;
+  min-width: 5rem;
+  max-width: fit-content;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(109, 109, 204, 0.74);
+  color: white;
+  border-radius: 10px;
+}
+.time__table--disable {
+  display: none;
+}
+.time__table--visible {
+  display: flex;
+  flex-direction: column;
+}
+.row {
+  display: flex;
+  justify-content: space-around;
+  width: 20rem;
+  border-bottom: 1px solid blue;
+}
+
+@media screen and (max-width: 725px) {
+  .menu__list--item {
+    font-size: 0.8rem;
+  }
+  .main__title {
+    font-size: 1.5rem;
+  }
+  .pixel {
+    font-size: 0.6;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main__title {
+    font-size: 1.2rem;
+  }
+  .menu__list--item {
+    font-size: 0.7rem;
+  }
+}
