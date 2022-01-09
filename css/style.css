@@ -1,0 +1,22 @@
+a {
+    text-decoration: none;
+    color: black;
+}
+nav {
+    background-color: darkseagreen;
+    position: inline-fixed;
+}
+.menu {
+    list-style-type: none;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+.item {
+    display: inline;
+    margin-right: 10px;
+}
+.icon {
+    height: 100px;
+    display: inline;
+}
